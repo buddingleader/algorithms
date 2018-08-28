@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "J74qEejx2Pg6Hj/zWQCNifHkfac=",
+			"path": "github.com/magiconair/properties/assert",
+			"revision": "c2353362d570a7bfa228149c62842019201cfb71",
+			"revisionTime": "2018-05-15T20:40:05Z"
+		}
+	],
+	"rootPath": "github.com/wangff15386/algorithms"
+}
