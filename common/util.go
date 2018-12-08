@@ -8,3 +8,10 @@ var (
 
 	B = []int{2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2}
 )
+
+// Exchange A[x] and A[y]
+func Exchange(A []int, x, y int) {
+	temp := A[x]
+	A[x] = A[y]
+	A[y] = temp
+}
