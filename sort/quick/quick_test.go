@@ -5,7 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/magiconair/properties/assert"
+	"github.com/stretchr/testify/assert"
+	"github.com/wangff15386/algorithms/common"
 )
 
 var (
@@ -78,4 +79,10 @@ func Benchmark_RandomizedQuickSort(b *testing.B) {
 		b.StartTimer()
 		RandomizedQuickSort(A, 0, len(A)-1, true)
 	}
+}
+
+func Test_reviewQuick(t *testing.T) {
+	A := common.A
+	reviewQuick(A, 0, len(A)-1)
+	assert.Equal(t, A, common.ASortIncrement)
 }
