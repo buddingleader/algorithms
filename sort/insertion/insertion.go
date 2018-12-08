@@ -18,3 +18,16 @@ func InsertionSort(A []int, isIncrement bool) []int {
 	}
 	return A
 }
+
+// Increment
+func reviewInsertion(a []int) []int {
+	for i := 1; i < len(a); i++ {
+		j, key := i-1, a[i]
+		for j >= 0 && key < a[j] {
+			a[j+1] = a[j]
+			j--
+		}
+		a[j+1] = key
+	}
+	return a
+}

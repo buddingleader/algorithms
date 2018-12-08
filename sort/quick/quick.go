@@ -61,3 +61,26 @@ func randomizedPartition(A []int, start, end int, isIncrement bool) int {
 	exchange(A, end, index)
 	return partition(A, start, end, isIncrement)
 }
+
+func reviewQuick(a []int, p, r int) {
+	if p < r {
+		q := reviewPartition(a, p, r)
+		reviewQuick(a, p, q-1)
+		reviewQuick(a, q+1, r)
+	}
+}
+
+func reviewPartition(a []int, p, r int) int {
+	k, key := r, a[r]
+	for i := r - 1; i >= p; i-- {
+		if a[i] > key {
+			k--
+			temp := a[k]
+			a[k] = a[i]
+			a[i] = temp
+		}
+	}
+	a[r] = a[k]
+	a[k] = key
+	return k
+}

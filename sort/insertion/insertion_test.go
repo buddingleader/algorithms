@@ -3,7 +3,7 @@ package insertionsort
 import (
 	"testing"
 
-	"github.com/magiconair/properties/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 var (
@@ -24,4 +24,9 @@ func Test_InsertionSort(t *testing.T) {
 	BSort := B
 	InsertionSort(B, false)
 	assert.Equal(t, B, BSort)
+}
+
+func Test_Review(t *testing.T) {
+	b := reviewInsertion(A)
+	assert.Equal(t, b, ASortIncrement)
 }
